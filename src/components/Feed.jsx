@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import {Card} from "./Card";
 
 export function Feed() {
     const [countries, setCountries] = useState([]);
@@ -16,26 +17,15 @@ export function Feed() {
     return (
         <>
             {!countries.length ? null : (
-                <div>
+                <section className="flex flex-wrap gap-12 justify-center">
                     {countries.map((country) => {
-                        const {
-                            flags,
-                            name,
-                            population,
-                            region,
-                            capital
-                        } = country
                         return (
-                            <article className="my-8">
-                                <img src={flags.svg} alt="{name}"/>
-                                <h2>{name.official}</h2>
-                                <p>Population: {population}</p>
-                                <p>Region: {region}</p>
-                                <p>Capital: {capital}</p>
-                            </article>
+                            <>
+                                <Card country={country}/>
+                            </>
                         )
                     })}
-                </div>
+                </section>
             )}
         </>
     )

@@ -5,7 +5,7 @@ import {Feed} from "./components/Feed";
 
 function App() {
     return (
-        <main>
+        <main className="bg-gray-100 p-10">
             <Header/>
             <section>
                 <Search/>
