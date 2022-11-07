@@ -36,9 +36,9 @@ export function Country({country, onClick}) {
                                 <span>{currency} </span>
                             )
                         })}</p>
-                        <p className="mb-1"><span className="font-bold">Languages:</span> {Object.values(languages).map((currency) => {
+                        <p className="mb-1"><span className="font-bold">Languages:</span> {Object.values(languages).map((language) => {
                             return (
-                                <span>{currency} </span>
+                                <span>{language} </span>
                             )
                         })}</p>
                     </div>
