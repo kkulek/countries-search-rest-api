@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      content: {
+        arrow: 'url("./img/left-arrow.svg")'
+      }
+    },
   },
   plugins: [],
 }
