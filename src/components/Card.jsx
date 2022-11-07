@@ -28,7 +28,7 @@ export function Card({country}) {
                 <div className="p-4 mb-8">
                     <h2 className="country-name my-4 font-bold text-xl">{name.official}</h2>
                     <p className="mb-1"><span className="font-bold">Population:</span> {population.toLocaleString()}</p>
-                    <p className="mb-1"><span className="font-bold">Region:</span> {region}</p>
+                    <p className="country-region mb-1"><span className="font-bold">Region: </span>{region}</p>
                     <p><span className="font-bold">Capital:</span> {capital}</p>
                 </div>
             </article>
