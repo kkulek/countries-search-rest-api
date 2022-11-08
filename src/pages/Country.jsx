@@ -36,7 +36,7 @@ export function CountryPage() {
             <div className="flex md:gap-10 flex-wrap h-screen">
                 <img className="object-contain rounded drop-shadow-xl h-52 md:h-96"
                      src={flags.svg}
-                     alt="{name}"
+                     alt={name.official + ` flag`}
                 />
                 <div className="mb-8">
                     <h2 className="mb-4 font-bold text-3xl dark:text-slate-200">{name.official}</h2>
