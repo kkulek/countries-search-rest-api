@@ -21,7 +21,7 @@ export function Card({country}) {
                     transition duration-300">
                     <img className="drop-shadow-xl"
                          src={flags.svg}
-                         alt="{name}"
+                         alt={name.official + ` flag`}
                     />
                     <div className="p-4 mb-8">
                         <h2 className="country-name my-4 font-bold text-xl dark:text-slate-200">{name.official}</h2>
