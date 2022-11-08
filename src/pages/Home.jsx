@@ -6,8 +6,10 @@ import {Feed} from "../components/Feed";
 export function Home() {
     return (
         <>
-            <Search/>
-            <Filter/>
+            <div className="flex justify-between gap-2">
+                <Search/>
+                <Filter/>
+            </div>
             <Feed/>
         </>
     )

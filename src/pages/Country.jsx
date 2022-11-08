@@ -1,9 +1,17 @@
 import {Link, useLocation} from 'react-router-dom';
+import {useEffect} from "react";
 
-export function CountryPage(){
+export function CountryPage() {
     const location = useLocation();
     const country = location.state;
-    console.log(country)
+
+    useEffect(() => {
+        document.documentElement.scrollTo({
+            top: 0,
+            behavior: "instant",
+        })
+    }, [])
+
 
     const {
         flags,
@@ -19,26 +27,37 @@ export function CountryPage(){
 
     return (
         <>
-            <Link to="/">Go back</Link>
-            <div className="flex gap-10 flex-wrap">
+            <Link to="/" className="inline-block px-6 py-1 mb-10 shadow rounded
+            bg-white dark:bg-gray-800 dark:text-slate-200
+            hover:bg-gray-800 dark:hover:bg-white hover:dark:text-black hover:text-slate-200
+            duration-500"
+            >Back</Link>
+
+            <div className="flex md:gap-10 flex-wrap h-screen">
                 <img className="object-contain rounded drop-shadow-xl h-52 md:h-96"
                      src={flags.svg}
                      alt="{name}"
                 />
                 <div className="mb-8">
-                    <h2 className="mb-4 font-bold text-3xl">{name.official}</h2>
-                    <p className="mb-1"><span className="font-bold">Native Name:</span> {name.common}</p>
-                    <p className="mb-1"><span className="font-bold">Population:</span> {population.toLocaleString()}</p>
-                    <p className="mb-1"><span className="font-bold">Region:</span> {region}</p>
-                    <p className="mb-1"><span className="font-bold">Sub Region:</span> {subregion}</p>
-                    <p className="mb-1"><span className="font-bold">Capital:</span> {capital}</p>
-                    <p className="mb-1"><span className="font-bold">Top Level Domain:</span> {tld}</p>
-                    <p className="mb-1"><span className="font-bold">Currencies:</span> {Object.keys(currencies).map((currency) => {
+                    <h2 className="mb-4 font-bold text-3xl dark:text-slate-200">{name.official}</h2>
+                    <p className="mb-1 dark:text-slate-200"><span
+                        className="font-bold">Native Name:</span> {name.common}</p>
+                    <p className="mb-1 dark:text-slate-200"><span
+                        className="font-bold">Population:</span> {population.toLocaleString()}</p>
+                    <p className="mb-1 dark:text-slate-200"><span className="font-bold">Region:</span> {region}</p>
+                    <p className="mb-1 dark:text-slate-200"><span className="font-bold">Sub Region:</span> {subregion}
+                    </p>
+                    <p className="mb-1 dark:text-slate-200"><span className="font-bold">Capital:</span> {capital}</p>
+                    <p className="mb-1 dark:text-slate-200"><span className="font-bold">Top Level Domain:</span> {tld}
+                    </p>
+                    <p className="mb-1 dark:text-slate-200"><span
+                        className="font-bold">Currencies:</span> {Object.keys(currencies).map((currency) => {
                         return (
                             <span>{currency} </span>
                         )
                     })}</p>
-                    <p className="mb-1"><span className="font-bold">Languages:</span> {Object.values(languages).map((language) => {
+                    <p className="mb-1 dark:text-slate-200"><span
+                        className="font-bold">Languages:</span> {Object.values(languages).map((language) => {
                         return (
                             <span>{language} </span>
                         )

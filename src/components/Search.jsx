@@ -9,9 +9,9 @@ export function Search() {
             const countryName = document.querySelectorAll('.country-name');
             countryName.forEach((name) => {
                  if (name.innerText.toLowerCase().includes(value.toLowerCase())) {
-                    name.parentElement.parentElement.style.display = 'flex'
+                    name.parentElement.parentElement.parentElement.style.display = 'flex'
                 } else {
-                    name.parentElement.parentElement.style.display = 'none'
+                    name.parentElement.parentElement.parentElement.style.display = 'none'
                 }
             })
         })

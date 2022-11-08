@@ -16,13 +16,13 @@ export function Header() {
     }
 
     return (
-        <div className="flex justify-between items-center">
-            <h1>Where in the world?</h1>
+        <header className="flex bg-white dark:bg-gray-800 justify-between items-center gap-2 p-6 sm:px-10 shadow">
+            <h1 className="text-2xl font-bold sm:text-4xl md:text-5xl dark:text-slate-200">Where in the world?</h1>
             <div className="flex gap-2 items-center cursor-pointer"
                  onClick={handleThemeSwitch}>
                 <span className="inline-block w-6 h-6 dark:w-5 dark:h-5 bg-icon-sun dark:bg-icon-moon"></span>
-                <p>{theme === "dark" ? "Dark mode" : "Light mode"}</p>
+                <p className="text-sm md:text-base dark:text-slate-200">{theme === "dark" ? "Dark mode" : "Light mode"}</p>
             </div>
-        </div>
+        </header>
     )
 }

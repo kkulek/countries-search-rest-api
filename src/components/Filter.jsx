@@ -11,10 +11,9 @@ export function Filter() {
             countryRegion.forEach((region) => {
 
                 if (region.innerText.toLowerCase().includes(value.toLowerCase())) {
-                    region.parentElement.parentElement.style.display = 'flex'
-
+                    region.parentElement.parentElement.parentElement.style.display = 'flex'
                 } else {
-                    region.parentElement.parentElement.style.display = 'none'
+                    region.parentElement.parentElement.parentElement.style.display = 'none'
                 }
             })
         })
@@ -22,7 +21,8 @@ export function Filter() {
 
     return (
         <>
-            <select name="region" id="filter" placeholder="test">
+            <select className="block shrink px-4 py-2 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                name="region" id="filter" placeholder="test">
                 <option value="" >Filter by region</option>
                 <option value="africa">Africa</option>
                 <option value="americas">Americas</option>
