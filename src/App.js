@@ -1,18 +1,19 @@
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import {Header} from "./components/Header";
-import {Search} from "./components/Search";
-import {Filter} from "./components/Filter";
-import {Feed} from "./components/Feed";
+import {Home} from "./pages/Home";
+import {CountryPage} from "./pages/Country";
 
 function App() {
     return (
-        <main className="bg-gray-100 p-10">
+        <Router>
             <Header/>
-            <section>
-                <Search/>
-                <Filter/>
-            </section>
-            <Feed/>
-        </main>
+            <main className="bg-gray-100 p-10">
+                    <Routes>
+                        <Route path="/" element={<Home/>} />
+                        <Route path="/countries/:name" element={<CountryPage />} />
+                    </Routes>
+            </main>
+        </Router>
     )
 }
 
