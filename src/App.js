@@ -6,13 +6,15 @@ import {CountryPage} from "./pages/Country";
 function App() {
     return (
         <Router>
+            <div className="bg-gray-100 dark:bg-gray-900 h-full min-h-screen">
             <Header/>
-            <main className="bg-gray-100 p-10">
+            <main className="p-4 sm:p-10">
                     <Routes>
                         <Route path="/" element={<Home/>} />
-                        <Route path="/countries/:name" element={<CountryPage />} />
+                        <Route path="/countries/:name" element={<CountryPage />}/>
                     </Routes>
             </main>
+            </div>
         </Router>
     )
 }

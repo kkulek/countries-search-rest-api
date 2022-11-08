@@ -17,7 +17,7 @@ export function Feed() {
     return (
         <>
             {!countries.length ? null : (
-                <section className="flex flex-wrap gap-12 justify-center sm:justify-start">
+                <section className="flex flex-wrap gap-12 my-8 justify-center sm:justify-start ">
                     {countries.map((country) => {
                         return (
                             <>
