@@ -18,7 +18,7 @@ export function Header() {
     return (
         <div className="flex justify-between items-center">
             <h1>Where in the world?</h1>
-            <div className="flex gap-2 items-center"
+            <div className="flex gap-2 items-center cursor-pointer"
                  onClick={handleThemeSwitch}>
                 <span className="inline-block w-6 h-6 dark:w-5 dark:h-5 bg-icon-sun dark:bg-icon-moon"></span>
                 <p>{theme === "dark" ? "Dark mode" : "Light mode"}</p>
